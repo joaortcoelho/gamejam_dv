@@ -1,3 +1,3 @@
-# gamejam_dv
+# GameJam DV
 
-ainda n sei
+ai sabes sabes
