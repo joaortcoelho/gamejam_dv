@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     
     //BOOLS
-    private bool isGrounded, jumpCommand;
+    private bool isGrounded, jumpCommand, isInteracting;
 
     // OTHER VALUES
     private float movementInput;
@@ -96,8 +96,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Debug.Log("Interact");
+            isInteracting = true;
         }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            isInteracting = false;
+        }
+
 
     }
 
@@ -107,4 +113,36 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
+    private bool CountDownTimer()
+    {
+        int countDownStartValue = 5;
+        if (countDownStartValue > 0)
+        {
+            TimeSpan timeSpan = TimeSpan.FromSeconds(countDownStartValue);
+            Debug.Log(countDownStartValue);
+            countDownStartValue--;
+            Invoke("CountDownTimer", 1.0f);
+        }
+        else
+        {
+            return true;
+        }
+        
+        return false;
+    }
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        
+        if (other.CompareTag("EvilPact") && isInteracting)
+        {
+            
+            if (CountDownTimer())
+            {
+                Debug.Log("MESSI");
+                other.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            }
+        }
+    }
 }

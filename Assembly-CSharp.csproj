@@ -747,11 +747,14 @@
      <Reference Include="UnityEditor.UI">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     <Reference Include="Unity.2D.Psdimporter.Editor">
+     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -759,8 +762,8 @@
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
@@ -776,9 +779,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
      <HintPath>/home/nunomartinho/Unity/unity-projects/gamejam_dv/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
