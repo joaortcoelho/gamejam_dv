@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Data/Level", fileName = "New Level Data")]
+[CreateAssetMenu(menuName = "Data/Level Data", fileName = "New Level Data")]
 public class LevelsInformation : ScriptableObject
 {
   private int maxPacts = 0;
@@ -17,5 +17,15 @@ public class LevelsInformation : ScriptableObject
   {
     get => purifiedPacts;
     set => purifiedPacts = value;
+  }
+  public void OnAfterDeserialize()
+  {
+    maxPacts = 0;
+    purifiedPacts = 0;
+  }
+
+  public bool IsLevelCompleted()
+  {
+    return maxPacts == purifiedPacts;
   }
 }

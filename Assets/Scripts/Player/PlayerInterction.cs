@@ -37,6 +37,8 @@ public class PlayerInterction : MonoBehaviour
             pact.Purify();
             timer = 0;
         }
+        
+        
 
     }
 }
