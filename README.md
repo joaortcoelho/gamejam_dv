@@ -1,3 +1,3 @@
 # GameJam DV
 
-ai sabes sabes
+O melhor jogo que o IPS já alguma vez viu na vida!
