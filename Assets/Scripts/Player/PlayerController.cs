@@ -93,56 +93,6 @@ public class PlayerController : MonoBehaviour
         {
             jumpCommand = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            isInteracting = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.X))
-        {
-            isInteracting = false;
-        }
-
-
-    }
-
-    
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
-
-    private bool CountDownTimer()
-    {
-        int countDownStartValue = 5;
-        if (countDownStartValue > 0)
-        {
-            TimeSpan timeSpan = TimeSpan.FromSeconds(countDownStartValue);
-            Debug.Log(countDownStartValue);
-            countDownStartValue--;
-            Invoke("CountDownTimer", 1.0f);
-        }
-        else
-        {
-            return true;
-        }
         
-        return false;
-    }
-
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        
-        if (other.CompareTag("EvilPact") && isInteracting)
-        {
-            
-            if (CountDownTimer())
-            {
-                Debug.Log("MESSI");
-                other.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
-            }
-        }
     }
 }
