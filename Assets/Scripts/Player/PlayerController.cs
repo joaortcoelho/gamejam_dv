@@ -6,22 +6,24 @@ public class PlayerController : MonoBehaviour
 {
     // REFS
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask whatIsGround;
     private Rigidbody2D rb;
     
     //BOOLS
     private bool isGrounded, jumpCommand, isInteracting;
 
-    // OTHER VALUES
+    // PLAYER INPUT
     private float movementInput;
-    [SerializeField] private LayerMask whatIsGround;
-    [SerializeField] private float groundCheckRadius = 2f;
+    
+    //PLAYER MOVEMENT VALUES
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float acceleration = 2f;
-    [SerializeField] private float decceleration = 2f;
+    [SerializeField] private float deceleration = 2f;
     [SerializeField] private float velPower = 2f;
+    [SerializeField] private float groundCheckRadius = 2f;
     
-    //JUMP VALUES
+    //PLAYER JUMP VALUES
     [SerializeField] private float fallMultiplier = 2.5f;
     [SerializeField] private float lowJumpMultiplier = 2f;
     void Start()
@@ -33,8 +35,6 @@ public class PlayerController : MonoBehaviour
     {
         CheckInput();
         CheckIsGround();
-
-
     }
 
     private void FixedUpdate()
@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour
             Jump();
             jumpCommand = false;
         }
-
+        
+        //VARIABLE JUMP HEIGHT && MORE GRAVITY WHEN JUMPING
         if (rb.velocity.y < 0)
         {
             rb.gravityScale = fallMultiplier;
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
         
         float speedDif = targetSpeed - rb.velocity.x;
         
-        float accelRate = (Math.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration;
+        float accelRate = (Math.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
 
         float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
         
@@ -94,5 +95,10 @@ public class PlayerController : MonoBehaviour
             jumpCommand = true;
         }
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }

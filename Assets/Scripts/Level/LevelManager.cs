@@ -11,6 +11,5 @@ public class LevelManager : MonoBehaviour
         levelData.OnAfterDeserialize();
         GameObject[] pactsObj = GameObject.FindGameObjectsWithTag("EvilPact");
         levelData.MaxPacts = pactsObj.Length;
-        Debug.Log("EvilPacts: "+ pactsObj.Length);
     }
 }

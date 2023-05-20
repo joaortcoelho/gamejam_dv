@@ -7,9 +7,14 @@ public class PlayerInterction : MonoBehaviour
 {
     private bool isInteracting;
     private float timer;
-    [SerializeField]private float timeToPurify = 5f;
+    [SerializeField]private float timeToPurify = 2f;
 
     private void Update()
+    {
+        CheckInteractInput();
+    }
+
+    void CheckInteractInput()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -21,24 +26,21 @@ public class PlayerInterction : MonoBehaviour
             isInteracting = false;
         }
     }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("EvilPact") || !isInteracting) return;
         EvilPactLogic pact = other.gameObject.GetComponent<EvilPactLogic>();
-        if (timer < timeToPurify && !pact.IsPurified)
+        if (pact == null) return;
+        
+        if (timer < timeToPurify && !pact.IsPurified) // cooldown while purifying
         {
             Debug.Log(timer);
             timer += Time.deltaTime;
         }
         else
         {
-            if (pact == null) return;
             pact.Purify();
             timer = 0;
         }
-        
-        
-
     }
 }
