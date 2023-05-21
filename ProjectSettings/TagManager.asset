@@ -43,3 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 104269573
+    locked: 0
+  - name: Decoration
+    uniqueID: 2211979881
+    locked: 0
+  - name: Platforms
+    uniqueID: 1908675357
+    locked: 0
+  - name: Statues
+    uniqueID: 1910958357
+    locked: 0
+  - name: Enemy
+    uniqueID: 2095320159
+    locked: 0
+  - name: Player
+    uniqueID: 1288442859
+    locked: 0
+  - name: Foreground Decoration
+    uniqueID: 4283718717
+    locked: 0
