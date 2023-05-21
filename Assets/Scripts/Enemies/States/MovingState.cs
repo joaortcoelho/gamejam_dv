@@ -16,7 +16,7 @@ public class MovingState : State
     public override void Enter()
     {
         base.Enter();
-        entity.setVelocity(stateData.movementSpeed);
+        entity.SetVelocity(stateData.movementSpeed);
         isDetectingLedge = entity.CheckLedge();
         isDetectingWall = entity.CheckWall();
     }

@@ -11,13 +11,13 @@ public class IdleState : State
     
     public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
     {
-        this.stateData = this.stateData;
+        this.stateData = stateData;
     }
 
     public override void Enter()
     {
         base.Enter();
-        entity.setVelocity(0f);
+        entity.SetVelocity(0f);
         isIdleTimeOver = false;
         SetRandomIdleTime();
     }
