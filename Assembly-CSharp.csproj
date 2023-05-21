@@ -84,7 +84,9 @@
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/Sprites" />
      <Folder Include="Assets/Scripts/Interactables" />
+     <Folder Include="Assets/Data" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <Folder Include="Assets/Data/LevelData" />
      <Folder Include="Assets/Scripts/Level" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/Audio/music" />
