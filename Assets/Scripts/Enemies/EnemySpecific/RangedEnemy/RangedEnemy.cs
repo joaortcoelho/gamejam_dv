@@ -15,5 +15,6 @@ public class RangedEnemy : Entity
         base.Start();
 
         movingState = new RE_MovingState(this, stateMachine, "moving", movingStateData, this);
+		idleState = new RE:IdleState(this, stateMachine, "idle", idleStateData, this);
     }
 }
