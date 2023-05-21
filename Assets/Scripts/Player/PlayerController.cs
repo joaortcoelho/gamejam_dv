@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
     private Rigidbody2D rb;
-    
+
+    private Animator animator;
     //BOOLS
-    private bool isGrounded, jumpCommand, isInteracting;
+    private bool isGrounded, jumpCommand, isInteracting, isFacingRight, isWalking;
 
     // PLAYER INPUT
     private float movementInput;
@@ -29,12 +30,16 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        isFacingRight = true;
     }
 
     private void Update()
     {
         CheckInput();
         CheckIsGround();
+        CheckMovementDirection();
+        UpdateAnimations();
     }
 
     private void FixedUpdate()
@@ -97,6 +102,32 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void CheckMovementDirection()
+    {
+        if (isFacingRight && movementInput < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && movementInput > 0)
+        {
+            Flip();
+        }
+
+        isWalking = movementInput != 0;
+    }
+    
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight; 
+        //transform.Rotate(0.0f, 180.0f, 0.0f);
+        transform.localScale = new Vector2(-1, 1) * transform.localScale;
+    }
+
+    private void UpdateAnimations()
+    {
+        animator.SetBool("isWalking", isWalking);
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
