@@ -10,20 +10,24 @@ public class EvilPactLogic : MonoBehaviour
     private GameObject aliveGO, brokenTopGO, brokenBotGO;
     private Rigidbody2D rbBrokenTop;
     private AudioSource audioSource;
+    private Light2D light; 
     [SerializeField] private ScriptableAudioClips deathSounds, rumbleSounds, heartSounds;
     [SerializeField] private LevelsInformation levelData;
-    private Light2D light; 
     
     public bool IsPurified { get; private set; }
     [SerializeField] private bool canRecover = false;
 
+    //TIMER
     private float recoveryTimer = 0f;
     [SerializeField] private float recoveryCooldown = 5f;
+    
     //EVENTS 
     public delegate void PlayerInteractedWithPact();
     public static event PlayerInteractedWithPact OnPurifyPact;
+    
     private void Start()
     {
+        // Initializing refs 
         aliveGO = transform.Find("Alive").gameObject;
         brokenBotGO = transform.Find("BrokenBot").gameObject;
         brokenTopGO = transform.Find("BrokenTop").gameObject;
