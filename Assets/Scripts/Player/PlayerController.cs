@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     //BOOLS
-    private bool isGrounded, jumpCommand, isInteracting, isFacingRight, isWalking;
+    private bool isGrounded, jumpCommand, isFacingRight, isWalking;
 
     // PLAYER INPUT
     private float movementInput;
@@ -126,6 +126,8 @@ public class PlayerController : MonoBehaviour
     private void UpdateAnimations()
     {
         animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isGrounded", isGrounded);
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
     
     private void OnDrawGizmos()
