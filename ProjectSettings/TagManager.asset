@@ -15,8 +15,8 @@ TagManager:
   - UI
   - Ground
   - Interactable
-  - 
-  - 
+  - Player
+  - Dead
   - 
   - 
   - 
@@ -44,6 +44,27 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
+<<<<<<< HEAD
+    uniqueID: 4002457591
+    locked: 0
+  - name: Decoration
+    uniqueID: 1919822333
+    locked: 0
+  - name: Platforms
+    uniqueID: 3930501829
+    locked: 0
+  - name: Statues
+    uniqueID: 3348603789
+    locked: 0
+  - name: Enemy
+    uniqueID: 532324947
+    locked: 0
+  - name: Player
+    uniqueID: 3930588853
+    locked: 0
+  - name: Foreground Decoration
+    uniqueID: 1386379977
+=======
     uniqueID: 104269573
     locked: 0
   - name: Decoration
@@ -63,4 +84,5 @@ TagManager:
     locked: 0
   - name: Foreground Decoration
     uniqueID: 4283718717
+>>>>>>> main
     locked: 0

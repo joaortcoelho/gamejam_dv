@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0b6dbd022b0cd02a96c5c16fa7d812, type: 3}
   m_Name: StatuesRecoveryAudio
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: a292ec0ecf8519e7e8055496e25aa1d2, type: 3}
+  - {fileID: 8300000, guid: 1bac64c6c34e3c5db9f0c2eb55575de4, type: 3}
+  - {fileID: 8300000, guid: c7d2c9417d9c4bedd8758300285f2a5e, type: 3}

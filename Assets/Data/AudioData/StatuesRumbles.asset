@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0b6dbd022b0cd02a96c5c16fa7d812, type: 3}
   m_Name: StatuesRumbles
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 4cf7ffc02aef0f5cabd4782eae129371, type: 3}
+  - {fileID: 8300000, guid: d5c7f73bc91ffebe1a248194d36c0475, type: 3}
+  - {fileID: 8300000, guid: 86d5cef34c614d9dc8d8e844b8386e54, type: 3}
+  - {fileID: 8300000, guid: 2419cb817a6c7a162b7c7715cccecf02, type: 3}
+  - {fileID: 8300000, guid: 13a33a5ca1fc44f9aa52da20f2c18e0b, type: 3}
