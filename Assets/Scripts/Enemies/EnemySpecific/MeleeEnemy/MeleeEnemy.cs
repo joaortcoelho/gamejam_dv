@@ -6,6 +6,7 @@ public class MeleeEnemy : Entity
 {
     public ME_IdleState idleState { get; private set; }
     public ME_MovingState movingState { get; private set; }
+    public float damage = 5f;
 
     [SerializeField] private D_IdleState idleStateData;
     [SerializeField] private D_MovingState movingStateData;

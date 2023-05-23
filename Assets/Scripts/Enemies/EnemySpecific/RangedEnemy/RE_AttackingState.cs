@@ -14,7 +14,6 @@ public class RE_AttackingState : AttackingState
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Entering attacking");
         entity.Flip();
     }
 

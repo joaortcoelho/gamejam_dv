@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2158317138566376749
 MonoBehaviour:
@@ -171,3 +171,5 @@ MonoBehaviour:
   projectileSpeed: 10
   destroyTimer: 3
   rb: {fileID: 0}
+  damage: 10
+  sanity: {fileID: 11400000, guid: f87b43834170ac4e4aa7e5fbcb1ce784, type: 2}

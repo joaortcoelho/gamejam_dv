@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Projectile : MonoBehaviour
     public float projectileSpeed = 10f;
     public float destroyTimer = 3f;
     public Rigidbody2D rb;
+    public float damage = 10f;
+    [SerializeField] private ScriptableFloat sanity;
     
     private void Start()
     {
@@ -20,8 +23,13 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, destroyTimer);
     }
 
-    public void SetVelocity(int direction)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        rb.velocity = transform.right * (projectileSpeed * direction);
+        if (other.CompareTag("Player"))
+        {
+            sanity.Value -= damage;
+            Debug.Log(sanity.Value);
+        }
+        Destroy(gameObject);
     }
 }

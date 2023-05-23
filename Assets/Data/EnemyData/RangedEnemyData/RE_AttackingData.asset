@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: RE_AttackingData
   m_EditorClassIdentifier: 
   sanityDamage: 1
+  attackingTime: 1
