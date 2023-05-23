@@ -8,6 +8,12 @@ public class PlayerInterction : MonoBehaviour
     private bool isInteracting;
     private float timer;
     [SerializeField]private float timeToPurify = 2f;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -19,11 +25,19 @@ public class PlayerInterction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             isInteracting = true;
+            animator.SetBool("isInteracting", isInteracting);
+            animator.SetFloat("interactFloat", 1f);
         }
 
+        /*if (Input.GetKey(KeyCode.X))
+        {
+            animator.SetFloat("interactFloat", 0f);
+        }*/
         if (Input.GetKeyUp(KeyCode.X))
         {
+            animator.SetFloat("interactFloat", -1f);
             isInteracting = false;
+            animator.SetBool("isInteracting", isInteracting);
         }
     }
     private void OnTriggerStay2D(Collider2D other)

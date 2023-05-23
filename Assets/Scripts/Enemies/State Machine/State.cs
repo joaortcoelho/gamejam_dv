@@ -24,7 +24,7 @@ public class State
 
    public virtual void Exit()
    {
-      entity.anim.SetBool(animBoolName, true);
+      entity.anim.SetBool(animBoolName, false);
    }
    
    public virtual void LogicUpdate()
