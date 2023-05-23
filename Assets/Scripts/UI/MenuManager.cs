@@ -11,10 +11,18 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        creditsMenuGO.SetActive(false);
-        tutorialMenuGO.SetActive(false);
+        Cursor.visible = false;
+        if (creditsMenuGO && tutorialMenuGO)
+        {
+            creditsMenuGO.SetActive(false);
+            tutorialMenuGO.SetActive(false);
+        }
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void PlayLevelOne()
     {
         SceneManager.LoadScene("level1");

@@ -16,6 +16,7 @@ public class EvilPactLogic : MonoBehaviour
     [SerializeField] private LevelsInformation levelData;
     [SerializeField] private GameObject statueBrokenParticle;
     [SerializeField] private GameObject foundLight;
+    [SerializeField] private ParticleSystem crossParticles;
     public bool IsPurified { get; private set; }
     [SerializeField] private bool canRecover = false;
 
@@ -67,7 +68,7 @@ public class EvilPactLogic : MonoBehaviour
         PlaySound(deathSounds, 0.0f, true);
         //DESTROY STATUE
         DestroyStatue();
-
+        crossParticles.Play();
         //FUTURE CHANGE LEVEL
         if (levelData.IsLevelCompleted())
         {
@@ -95,6 +96,7 @@ public class EvilPactLogic : MonoBehaviour
 
     void DestroyStatue()
     {
+        CameraShake.Instance.Shake(2f, .3f);
         ChangeStatueActiveGo(false, true, true);
         //tirar os magic numbers
         rbBrokenTop.AddForce((new Vector2(Random.Range(5f, 10f), Random.Range(5f, 10f))), ForceMode2D.Impulse);
@@ -121,6 +123,7 @@ public class EvilPactLogic : MonoBehaviour
             OnPurifyPact?.Invoke(); // update ui
             audioSource.spatialBlend = 1.0f;
             PlaySound(rumbleSounds, 1.0f, false);
+            crossParticles.Stop();
             recoveryTimer = 0f;
         }
     }

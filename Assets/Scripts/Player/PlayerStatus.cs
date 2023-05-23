@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class PlayerStatus : MonoBehaviour
     //EVENTS
     public delegate void PlayerDamageCallback();
     public static event PlayerDamageCallback OnPlayerDamage;
+    public static event PlayerDamageCallback OnPlayerDeath;
     void Start()
     {
+        Time.timeScale = 1f;
         sanity.OnAfterDeserialize();
     }
     void Update()
@@ -33,19 +36,21 @@ public class PlayerStatus : MonoBehaviour
             //Debug.Log(sanity.Value);
             sanity.Value -= Time.deltaTime;
         }
-        else
+        else if (sanity.Value <= 0f)
         {
+        
             Die();
+
         }
     }
 
     private void Die()
     {
-        Debug.Log("MORREU");
-        //instaciar particulas
+        CameraShake.Instance.Shake(2f, .2f);
         Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
         Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
         Destroy(gameObject);
+        
     }
     private void OnTriggerStay2D(Collider2D other)
     {
