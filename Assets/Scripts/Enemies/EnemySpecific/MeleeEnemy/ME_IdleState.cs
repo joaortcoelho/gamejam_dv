@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RE_IdleState : IdleState
+public class ME_IdleState : IdleState
 {
-    private RangedEnemy enemy;
+    private MeleeEnemy enemy;
     
-    public RE_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, RangedEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
+    public ME_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, MeleeEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -27,7 +27,7 @@ public class RE_IdleState : IdleState
 
         if (isIdleTimeOver)
         {
-            //stateMachine.ChangeState(enemy.attackingState);
+            stateMachine.ChangeState(enemy.movingState);
         }
     }
 

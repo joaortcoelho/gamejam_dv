@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RE_MovingState : MovingState
+public class ME_MovingState : MovingState
 {
-    private RangedEnemy enemy;
+    private MeleeEnemy enemy;
     
-    public RE_MovingState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MovingState stateData, RangedEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
+    public ME_MovingState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MovingState stateData, MeleeEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }

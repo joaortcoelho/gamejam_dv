@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RE_IdleState : IdleState
+public class AttackingState : State
 {
-    private RangedEnemy enemy;
+    protected D_AttackingState stateData;
     
-    public RE_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, RangedEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
+    
+    public AttackingState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_AttackingState stateData) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = enemy;
+        this.stateData = stateData;
     }
 
     public override void Enter()
@@ -24,11 +25,6 @@ public class RE_IdleState : IdleState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        if (isIdleTimeOver)
-        {
-            //stateMachine.ChangeState(enemy.attackingState);
-        }
     }
 
     public override void PhysicsUpdate()
