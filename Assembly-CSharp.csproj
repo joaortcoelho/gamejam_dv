@@ -68,6 +68,8 @@
      <Compile Include="Assets\Scripts\Enemies\States\AttackingState.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemySpecific\RangedEnemy\Projectile.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemySpecific\RangedEnemy\ShootingProjectile.cs" />
+     <Compile Include="Assets\Scripts\Player\LandingParticleController.cs" />
+     <Compile Include="Assets\Scripts\UI\MenuManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -104,11 +106,13 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Scenes\levels" />
      <Folder Include="Assets\Scripts\Enemies\States" />
      <Folder Include="Assets\Scripts\Enemies\States\Data" />
      <Folder Include="Assets\URP" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\Sprites\Environment\decorationPalette" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Scripts\SO" />
      <Folder Include="Assets\Sprites\Enemies\MeleeEnemy" />
@@ -143,6 +147,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\Sprites\Environment\Tiles\deco_tiles" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

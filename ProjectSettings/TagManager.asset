@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Enemy
+=======
+  - EvilPact
+>>>>>>> 0731cdf59b950e9e09ae64b69124139f48038f88
   layers:
   - Default
   - TransparentFX
@@ -12,10 +16,17 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - Enviroment
   - 
   - 
   - 
+=======
+  - Ground
+  - Dead
+  - Interactable
+  - Player
+>>>>>>> 0731cdf59b950e9e09ae64b69124139f48038f88
   - 
   - 
   - 
@@ -42,3 +53,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+  - name: Background
+    uniqueID: 751956641
+    locked: 0
+  - name: Decorations
+    uniqueID: 1156490027
+    locked: 0
+  - name: Enemy
+    uniqueID: 3615395945
+    locked: 0
+  - name: Player
+    uniqueID: 2211576833
+    locked: 0
+  - name: Platforms
+    uniqueID: 4159769321
+    locked: 0
+  - name: Foreground
+    uniqueID: 751968439
+    locked: 0
+>>>>>>> 0731cdf59b950e9e09ae64b69124139f48038f88

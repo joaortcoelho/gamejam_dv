@@ -25,8 +25,8 @@ public class PlayerInterction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             isInteracting = true;
-            animator.SetBool("isInteracting", isInteracting);
-            animator.SetFloat("interactFloat", 1f);
+            //animator.SetBool("isInteracting", isInteracting);
+            //animator.SetFloat("interactFloat", 1f);
         }
 
         /*if (Input.GetKey(KeyCode.X))
@@ -35,13 +35,14 @@ public class PlayerInterction : MonoBehaviour
         }*/
         if (Input.GetKeyUp(KeyCode.X))
         {
-            animator.SetFloat("interactFloat", -1f);
+           // animator.SetFloat("interactFloat", -1f);
             isInteracting = false;
-            animator.SetBool("isInteracting", isInteracting);
+            //animator.SetBool("isInteracting", isInteracting);
         }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
+        
         if (!other.CompareTag("EvilPact") || !isInteracting) return;
         EvilPactLogic pact = other.gameObject.GetComponent<EvilPactLogic>();
         if (pact == null) return;

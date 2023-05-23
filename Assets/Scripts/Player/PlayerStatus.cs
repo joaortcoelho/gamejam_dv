@@ -8,7 +8,8 @@ public class PlayerStatus : MonoBehaviour
     // REFS
     [SerializeField] private ScriptableFloat sanity;
     [SerializeField] private LevelsInformation levelData;
-    
+
+    [SerializeField] private GameObject deathChunkParticle, deathBloodParticle;
     //EVENTS
     public delegate void PlayerDamageCallback();
     public static event PlayerDamageCallback OnPlayerDamage;
@@ -41,6 +42,9 @@ public class PlayerStatus : MonoBehaviour
     private void Die()
     {
         Debug.Log("MORREU");
+        //instaciar particulas
+        Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
+        Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
         Destroy(gameObject);
     }
     private void OnTriggerStay2D(Collider2D other)
