@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2971019810320579417}
   - component: {fileID: 2971019810320579416}
   - component: {fileID: 2971019810320579414}
+  - component: {fileID: 4791224115850241749}
   m_Layer: 0
   m_Name: LEVELMANAGER
   m_TagString: Untagged
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: 9fce84dda6f2e2419ad84de3d92c4cbe, type: 2}
+  playerSanity: {fileID: 11400000, guid: f87b43834170ac4e4aa7e5fbcb1ce784, type: 2}
 --- !u!82 &2971019810320579414
 AudioSource:
   m_ObjectHideFlags: 0
@@ -142,3 +144,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &4791224115850241749
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971019810320579419}
+  m_Enabled: 0
