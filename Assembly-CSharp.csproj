@@ -47,10 +47,11 @@
      <Compile Include="Assets/Scripts/Player/PlayerStatus.cs" />
      <Compile Include="Assets/Scripts/SO/LevelsInformation.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
+     <Compile Include="Assets/Scripts/UI/MenuManager.cs" />
      <Compile Include="Assets/Scripts/Interactables/EvilPactLogic.cs" />
      <Compile Include="Assets/Scripts/Level/LevelManager.cs" />
      <Compile Include="Assets/Scripts/SO/ScriptableAudioClips.cs" />
-     <Compile Include="Assets/Scripts/UI/MenuManager.cs" />
+     <Compile Include="Assets/Scripts/Player/LandingParticleController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -77,6 +78,7 @@
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <Folder Include="Assets/Scenes/levels" />
      <Folder Include="Assets/URP" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />

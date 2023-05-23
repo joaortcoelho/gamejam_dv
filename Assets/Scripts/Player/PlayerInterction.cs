@@ -42,9 +42,8 @@ public class PlayerInterction : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("alo");
+        
         if (!other.CompareTag("EvilPact") || !isInteracting) return;
-        Debug.Log("alo2");
         EvilPactLogic pact = other.gameObject.GetComponent<EvilPactLogic>();
         if (pact == null) return;
         

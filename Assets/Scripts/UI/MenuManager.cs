@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+
+    [SerializeField] private GameObject creditsMenuGO, tutorialMenuGO;
+
+    private void Start()
+    {
+        creditsMenuGO.SetActive(false);
+        tutorialMenuGO.SetActive(false);
+    }
 
     public void PlayLevelOne()
     {
@@ -28,21 +37,21 @@ public class MenuManager : MonoBehaviour
 
     public void OpenCredits()
     {
-        
+        creditsMenuGO.SetActive(true);
     }
     
-    public void CloseOpenCredits()
+    public void CloseCredits()
     {
-        
+        creditsMenuGO.SetActive(false);
     }
 
     public void OpenTutorial()
     {
-        
+        tutorialMenuGO.SetActive(true);
     }
 
     public void CloseTutorial()
     {
-        
+        tutorialMenuGO.SetActive(false);
     }
 }

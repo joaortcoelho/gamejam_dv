@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // REFS
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private ParticleSystem dust; 
     private Rigidbody2D rb;
 
     private Animator animator;
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        CreateDust();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
     
     private void Flip()
     {
+        CreateDust();
         isFacingRight = !isFacingRight; 
         //transform.Rotate(0.0f, 180.0f, 0.0f);
         transform.localScale = new Vector2(-1, 1) * transform.localScale;
@@ -133,5 +136,10 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
     }
 }
