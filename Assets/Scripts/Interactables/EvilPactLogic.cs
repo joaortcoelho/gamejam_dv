@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
 
 public class EvilPactLogic : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class EvilPactLogic : MonoBehaviour
     private GameObject aliveGO, brokenTopGO, brokenBotGO;
     private Rigidbody2D rbBrokenTop;
     private AudioSource audioSource;
-    private Light2D light; 
-    [SerializeField] private ScriptableAudioClips deathSounds, rumbleSounds, heartSounds;
+    private Light2D light;
+    [SerializeField] private ScriptableAudioClips deathSounds, rumbleSounds;
     [SerializeField] private LevelsInformation levelData;
-    
+    [SerializeField] private GameObject statueBrokenParticle;
+    [SerializeField] private GameObject foundLight;
     public bool IsPurified { get; private set; }
     [SerializeField] private bool canRecover = false;
 
@@ -31,6 +33,11 @@ public class EvilPactLogic : MonoBehaviour
         aliveGO = transform.Find("Alive").gameObject;
         brokenBotGO = transform.Find("BrokenBot").gameObject;
         brokenTopGO = transform.Find("BrokenTop").gameObject;
+        if (canRecover)
+        {
+            foundLight = transform.Find("FoundLight").gameObject;
+            foundLight.SetActive(false);
+        }
         rbBrokenTop = brokenTopGO.GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         light = GetComponent<Light2D>();
@@ -90,8 +97,9 @@ public class EvilPactLogic : MonoBehaviour
     {
         ChangeStatueActiveGo(false, true, true);
         //tirar os magic numbers
-        rbBrokenTop.AddForce(new Vector2(6, 3), ForceMode2D.Impulse);
-        rbBrokenTop.AddTorque(1, ForceMode2D.Impulse);
+        rbBrokenTop.AddForce((new Vector2(Random.Range(5f, 10f), Random.Range(5f, 10f))), ForceMode2D.Impulse);
+        rbBrokenTop.AddTorque(2, ForceMode2D.Impulse);
+        Instantiate(statueBrokenParticle, aliveGO.transform.position, statueBrokenParticle.transform.rotation);
     }
 
     void StartRecovery()
@@ -104,6 +112,8 @@ public class EvilPactLogic : MonoBehaviour
         }
         else
         {
+            light.enabled = false;
+            foundLight.SetActive(true);
             IsPurified = false;
             ChangeStatueActiveGo(true, false, false);
             brokenTopGO.transform.position = aliveGO.transform.position;

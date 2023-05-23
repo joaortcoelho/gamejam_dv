@@ -47,9 +47,11 @@
      <Compile Include="Assets/Scripts/Player/PlayerStatus.cs" />
      <Compile Include="Assets/Scripts/SO/LevelsInformation.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
+     <Compile Include="Assets/Scripts/UI/MenuManager.cs" />
      <Compile Include="Assets/Scripts/Interactables/EvilPactLogic.cs" />
      <Compile Include="Assets/Scripts/Level/LevelManager.cs" />
      <Compile Include="Assets/Scripts/SO/ScriptableAudioClips.cs" />
+     <Compile Include="Assets/Scripts/Player/LandingParticleController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -66,6 +68,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
+     <Folder Include="Assets/Sprites/Environment/Tiles" />
      <Folder Include="Assets/Scripts/Enemies" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/TextMesh Pro" />
@@ -75,9 +78,11 @@
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <Folder Include="Assets/Scenes/levels" />
      <Folder Include="Assets/URP" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets/Sprites/Environment/decorationPalette" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <Folder Include="Assets/Scripts/SO" />
      <Folder Include="Assets/Materials" />
@@ -87,6 +92,7 @@
      <Folder Include="Assets/Scripts/Player" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
+     <Folder Include="Assets/Sprites/Environment" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/Sprites" />
      <Folder Include="Assets/Scripts/Interactables" />
@@ -107,6 +113,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+     <Folder Include="Assets/Sprites/Environment/Tiles/deco_tiles" />
      <Reference Include="UnityEngine">
      <HintPath>/home/nunomartinho/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

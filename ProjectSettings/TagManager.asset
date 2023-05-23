@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - EvilPact
-  - New tag
   layers:
   - Default
   - TransparentFX
@@ -14,9 +13,9 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Dead
   - Interactable
   - Player
-  - Dead
   - 
   - 
   - 
@@ -44,45 +43,20 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-<<<<<<< HEAD
-    uniqueID: 4002457591
+    uniqueID: 751956641
     locked: 0
-  - name: Decoration
-    uniqueID: 1919822333
-    locked: 0
-  - name: Platforms
-    uniqueID: 3930501829
-    locked: 0
-  - name: Statues
-    uniqueID: 3348603789
+  - name: Decorations
+    uniqueID: 1156490027
     locked: 0
   - name: Enemy
-    uniqueID: 532324947
+    uniqueID: 3615395945
     locked: 0
   - name: Player
-    uniqueID: 3930588853
-    locked: 0
-  - name: Foreground Decoration
-    uniqueID: 1386379977
-=======
-    uniqueID: 104269573
-    locked: 0
-  - name: Decoration
-    uniqueID: 2211979881
+    uniqueID: 2211576833
     locked: 0
   - name: Platforms
-    uniqueID: 1908675357
+    uniqueID: 4159769321
     locked: 0
-  - name: Statues
-    uniqueID: 1910958357
-    locked: 0
-  - name: Enemy
-    uniqueID: 2095320159
-    locked: 0
-  - name: Player
-    uniqueID: 1288442859
-    locked: 0
-  - name: Foreground Decoration
-    uniqueID: 4283718717
->>>>>>> main
+  - name: Foreground
+    uniqueID: 751968439
     locked: 0

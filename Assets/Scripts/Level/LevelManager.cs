@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelsInformation levelData;
-    void Start()
+    void Awake()
     {
         levelData.OnAfterDeserialize();
         GameObject[] pactsObj = GameObject.FindGameObjectsWithTag("EvilPact");
