@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbc74387ae3fac76a6667a3ee2e5552, type: 3}
   m_Name: PlayerSanity
   m_EditorClassIdentifier: 
-  initialValue: 20
+  initialValue: 50
