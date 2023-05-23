@@ -6,4 +6,5 @@ using UnityEngine;
 public class D_AttackingState : ScriptableObject
 {
    public float sanityDamage = 1f;
+   public float attackingTime = 1f;
 }

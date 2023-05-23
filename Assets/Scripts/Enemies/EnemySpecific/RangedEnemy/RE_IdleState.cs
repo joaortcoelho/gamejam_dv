@@ -14,6 +14,7 @@ public class RE_IdleState : IdleState
     public override void Enter()
     {
         base.Enter();
+        //Debug.Log("Entering Idle");
     }
 
     public override void Exit()
@@ -27,7 +28,7 @@ public class RE_IdleState : IdleState
 
         if (isIdleTimeOver)
         {
-            //stateMachine.ChangeState(enemy.attackingState);
+            stateMachine.ChangeState(enemy.attackingState);
         }
     }
 
