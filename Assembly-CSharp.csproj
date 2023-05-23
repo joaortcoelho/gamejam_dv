@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Enemies\States\Data\D_AttackingState.cs" />
      <Compile Include="Assets\Scripts\Enemies\States\AttackingState.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemySpecific\RangedEnemy\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\RangedEnemy\ShootingProjectile.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

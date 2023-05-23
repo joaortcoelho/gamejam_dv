@@ -5,8 +5,7 @@ using UnityEngine;
 public class RE_AttackingState : AttackingState
 {
     private RangedEnemy enemy;
-    //[SerializeField] private Transform shootingPoint;
-    
+
     public RE_AttackingState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_AttackingState stateData, RangedEnemy enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
@@ -17,7 +16,6 @@ public class RE_AttackingState : AttackingState
         base.Enter();
         Debug.Log("Entering attacking");
         entity.Flip();
-        //TODO: Disparar o mambo
     }
 
     public override void Exit()
