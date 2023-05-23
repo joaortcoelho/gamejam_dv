@@ -27,15 +27,16 @@ public class Entity : MonoBehaviour
         alive = transform.Find("Alive").gameObject;
         rb = alive.GetComponent<Rigidbody2D>();
         anim = alive.GetComponent<Animator>();
+        
         stateMachine = new FiniteStateMachine();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         stateMachine.currentState.LogicUpdate();
     }
 
-    public void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         stateMachine.currentState.PhysicsUpdate();
     }
