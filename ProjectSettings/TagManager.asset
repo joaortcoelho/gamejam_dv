@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - EvilPact
+  - Enviroment
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Dead
   - Interactable
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
