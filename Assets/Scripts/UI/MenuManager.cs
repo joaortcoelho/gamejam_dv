@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using Cursor = UnityEngine.Cursor;
 
 public class MenuManager : MonoBehaviour
 {
 
-    [SerializeField] private GameObject creditsMenuGO, tutorialMenuGO;
-    [SerializeField] private GameObject character;
-    [SerializeField] private GameObject playBtn;
+    [SerializeField] private GameObject creditsMenuGO, tutorialMenuGO, settingsMenuGO;
+    [SerializeField] private GameObject character, playBtn;
+    [SerializeField] private Slider volumeSlider;
 
     private void Start()
     {
         Cursor.visible = false;
-        if (creditsMenuGO && tutorialMenuGO)
+        character.SetActive(true);
+        if (creditsMenuGO && tutorialMenuGO && settingsMenuGO)
         {
             creditsMenuGO.SetActive(false);
             tutorialMenuGO.SetActive(false);
+            settingsMenuGO.SetActive(false);
         }
     }
 
@@ -25,8 +28,15 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetAxis("Cancel") == 1f)
         {
-            creditsMenuGO.SetActive(false);
-            tutorialMenuGO.SetActive(false);
+            CloseCredits();
+            CloseTutorial();
+            CloseSettings();
+        }
+
+        if (settingsMenuGO)
+        {
+            Cursor.visible = true;
+            VolumeAdjust();
         }
     }
 
@@ -44,14 +54,23 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void OpenSettingsMenu()
+    public void VolumeAdjust()
     {
-        
+        AudioListener.volume = volumeSlider.value;
     }
 
-    public void CloseSettingsMenu()
+    public void OpenSettings()
     {
-        
+        settingsMenuGO.SetActive(true);
+        settingsMenuGO.GetComponentInChildren<Slider>().Select();
+        character.SetActive(false);
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenuGO.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(playBtn, new BaseEventData(EventSystem.current));
+        character.SetActive(true);
     }
 
     public void OpenCredits()
