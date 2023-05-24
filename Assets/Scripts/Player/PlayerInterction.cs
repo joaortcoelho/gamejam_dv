@@ -34,6 +34,7 @@ public class PlayerInterction : MonoBehaviour
         {
             animator.SetBool("isInteracting", !isInteracting);
             animator.SetFloat("interactFloat", -1f);
+            isInteracting = false;
         }
     }
     
