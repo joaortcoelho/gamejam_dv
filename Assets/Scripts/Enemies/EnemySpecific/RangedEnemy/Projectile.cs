@@ -10,13 +10,14 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D rb;
     public float damage = 10f;
     [SerializeField] private ScriptableFloat sanity;
-    private AudioSource audioSource;
-    [SerializeField] private ScriptableAudioClips hitSounds;
+    
+    public delegate void PlayerCollison();
+    public static event PlayerCollison OnPlayerDamage;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * -projectileSpeed;
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -28,8 +29,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioClip clip = hitSounds.Clips[UnityEngine.Random.Range(0, hitSounds.Clips.Length)];
-            audioSource.PlayOneShot(clip, 1f);
+            OnPlayerDamage?.Invoke();
             sanity.Value -= damage;
             Debug.Log(sanity.Value);
         }

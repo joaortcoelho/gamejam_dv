@@ -5155,6 +5155,7 @@ MonoBehaviour:
   levelData: {fileID: 11400000, guid: 9fce84dda6f2e2419ad84de3d92c4cbe, type: 2}
   deathChunkParticle: {fileID: 4441549570117500691, guid: e0cbe844008d3122b9046acf13b81906, type: 3}
   deathBloodParticle: {fileID: 1257465767909404052, guid: ba0c95970630c6bd482fa262405bc029, type: 3}
+  hitSounds: {fileID: 11400000, guid: 99f2751139c87cf65b1f78af114f0eb1, type: 2}
 --- !u!70 &2862686076775120694
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
