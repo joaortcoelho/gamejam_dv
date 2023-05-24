@@ -11,12 +11,16 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] private LevelsInformation levelData;
 
     [SerializeField] private GameObject deathChunkParticle, deathBloodParticle;
+
+    private AudioListener audioListener;
     //EVENTS
     public delegate void PlayerDamageCallback();
     public static event PlayerDamageCallback OnPlayerDamage;
     public static event PlayerDamageCallback OnPlayerDeath;
     void Start()
     {
+        audioListener = GetComponent<AudioListener>();
+        audioListener.enabled = true;
         Time.timeScale = 1f;
         sanity.OnAfterDeserialize();
     }
@@ -46,9 +50,11 @@ public class PlayerStatus : MonoBehaviour
 
     private void Die()
     {
-        CameraShake.Instance.Shake(2f, .2f);
+        CameraShake.Instance.Shake(2f, .25f);
         Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
         Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
+        audioListener.enabled = false;
+        OnPlayerDeath?.Invoke();
         Destroy(gameObject);
         
     }

@@ -12,10 +12,10 @@ public class EvilPactLogic : MonoBehaviour
     private Rigidbody2D rbBrokenTop;
     private AudioSource audioSource;
     private Light2D light;
+    private GameObject foundLight;
     [SerializeField] private ScriptableAudioClips deathSounds, rumbleSounds;
     [SerializeField] private LevelsInformation levelData;
     [SerializeField] private GameObject statueBrokenParticle;
-    [SerializeField] private GameObject foundLight;
     [SerializeField] private ParticleSystem crossParticles;
     public bool IsPurified { get; private set; }
     [SerializeField] private bool canRecover = false;
@@ -47,7 +47,7 @@ public class EvilPactLogic : MonoBehaviour
         IsPurified = false;
         ChangeStatueActiveGo(true, false, false);
 
-        PlaySound(rumbleSounds, 1.0f, false);
+        PlaySound(rumbleSounds, 1.0f, false, .5f);
     }
 
     private void Update()
@@ -65,7 +65,7 @@ public class EvilPactLogic : MonoBehaviour
         light.enabled = true;
         levelData.PurifiedPacts++; // increments purified pacts to level manager
         OnPurifyPact?.Invoke(); // update level ui
-        PlaySound(deathSounds, 0.0f, true);
+        PlaySound(deathSounds, .0f, true, 1f);
         //DESTROY STATUE
         DestroyStatue();
         crossParticles.Play();
@@ -77,14 +77,14 @@ public class EvilPactLogic : MonoBehaviour
         
     }
     
-    void PlaySound(ScriptableAudioClips sounds, float audio3DValue, bool doOneShot)
+    void PlaySound(ScriptableAudioClips sounds, float audio3DValue, bool doOneShot, float volume)
     {
-        AudioClip clip = sounds.Clips[UnityEngine.Random.Range(0, sounds.Clips.Length)];
+        AudioClip clip = sounds.Clips[Random.Range(0, sounds.Clips.Length)];
         audioSource.spatialBlend = audio3DValue;
         audioSource.Stop();
         if (doOneShot)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip, volume);
         }
         else
         {
@@ -122,7 +122,7 @@ public class EvilPactLogic : MonoBehaviour
             levelData.PurifiedPacts--; // increments purified pacts to level manager
             OnPurifyPact?.Invoke(); // update ui
             audioSource.spatialBlend = 1.0f;
-            PlaySound(rumbleSounds, 1.0f, false);
+            PlaySound(rumbleSounds, 1.0f, false, .5f);
             crossParticles.Stop();
             recoveryTimer = 0f;
         }
