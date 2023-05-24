@@ -1,8 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Button = UnityEngine.UI.Button;
+using Cursor = UnityEngine.Cursor;
 
 public class MenuManager : MonoBehaviour
 {
@@ -46,20 +46,24 @@ public class MenuManager : MonoBehaviour
     public void OpenCredits()
     {
         creditsMenuGO.SetActive(true);
+        creditsMenuGO.GetComponentInChildren<Button>().Select();
     }
     
     public void CloseCredits()
     {
         creditsMenuGO.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(GameObject.Find("playBtn"), new BaseEventData(EventSystem.current));
     }
 
     public void OpenTutorial()
     {
         tutorialMenuGO.SetActive(true);
+        tutorialMenuGO.GetComponentInChildren<Button>().Select();
     }
 
     public void CloseTutorial()
     {
         tutorialMenuGO.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(GameObject.Find("playBtn"), new BaseEventData(EventSystem.current));
     }
 }
