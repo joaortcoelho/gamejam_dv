@@ -14561,7 +14561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2971019810320579414, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2971019810320579414, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_audioClip
@@ -14575,6 +14575,10 @@ PrefabInstance:
       propertyPath: levelData
       value: 
       objectReference: {fileID: 11400000, guid: 74c50c31093249371bbb6ec4170df592, type: 2}
+    - target: {fileID: 2971019810320579416, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d62cddcd4dc70accbfc815a8bcd8241, type: 3}
     - target: {fileID: 2971019810320579417, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -14622,6 +14626,10 @@ PrefabInstance:
     - target: {fileID: 2971019810320579419, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_Name
       value: LEVELMANAGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791224115850241749, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15416b1e4e91db02b952c397533b807b, type: 3}

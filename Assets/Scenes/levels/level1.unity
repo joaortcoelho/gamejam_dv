@@ -31568,7 +31568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2971019810320579414, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2971019810320579414, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_audioClip
@@ -31578,6 +31578,10 @@ PrefabInstance:
       propertyPath: grayscale
       value: 
       objectReference: {fileID: 1321996289}
+    - target: {fileID: 2971019810320579416, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d62cddcd4dc70accbfc815a8bcd8241, type: 3}
     - target: {fileID: 2971019810320579417, guid: 15416b1e4e91db02b952c397533b807b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -31836,10 +31840,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2862686076775120696, guid: d88feb5ba162d652e86c360504c5a193, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2862686076775120699, guid: d88feb5ba162d652e86c360504c5a193, type: 3}
       propertyPath: m_RootOrder
       value: 1
