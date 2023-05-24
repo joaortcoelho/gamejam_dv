@@ -372,7 +372,7 @@ TextureImporter:
       name: misc_scenery_12
       rect:
         serializedVersion: 2
-        x: 52
+        x: 44
         y: 125
         width: 16
         height: 16
@@ -393,8 +393,8 @@ TextureImporter:
       name: misc_scenery_13
       rect:
         serializedVersion: 2
-        x: 52
-        y: 141
+        x: 60
+        y: 125
         width: 16
         height: 16
       alignment: 0
@@ -418,8 +418,8 @@ TextureImporter:
         y: 79
         width: 18
         height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -439,8 +439,8 @@ TextureImporter:
         y: 79
         width: 15
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -868,6 +868,48 @@ TextureImporter:
       bones: []
       spriteID: 3eb871f8dc4311e6895ea4a94f14f80a
       internalID: 88418715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misc_scenery_36
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 141
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258808622bd01e2a894f1d536cb6194a
+      internalID: -37083375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misc_scenery_37
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 141
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15a1768ff4a75c2990e89697966879b
+      internalID: 1981746710
       vertices: []
       indices: 
       edges: []

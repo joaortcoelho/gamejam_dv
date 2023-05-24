@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8157935296869744957}
   - component: {fileID: 8157935296869744958}
   m_Layer: 0
-  m_Name: GrayScale
+  m_Name: GlobalVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
