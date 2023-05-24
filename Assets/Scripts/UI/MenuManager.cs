@@ -25,8 +25,8 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetAxis("Cancel") == 1f)
         {
-            creditsMenuGO.SetActive(false);
-            tutorialMenuGO.SetActive(false);
+            CloseCredits();
+            CloseTutorial();
         }
     }
 
