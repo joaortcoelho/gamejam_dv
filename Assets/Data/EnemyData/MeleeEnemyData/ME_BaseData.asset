@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ME_BaseData
   m_EditorClassIdentifier: 
   wallCheckDistance: 0.2
-  ledgeCheckDistance: 0.8
+  ledgeCheckDistance: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
