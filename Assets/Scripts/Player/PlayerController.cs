@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private ParticleSystem dust; 
     private Rigidbody2D rb;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip jumpSound;
 
     private Animator animator;
     //BOOLS
@@ -87,6 +89,9 @@ public class PlayerController : MonoBehaviour
     {
         CreateDust();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(jumpSound, 1f);
+
     }
 
     void CheckIsGround()
