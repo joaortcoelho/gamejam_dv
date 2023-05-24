@@ -33,7 +33,7 @@ public class PlayerInterction : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.X))
         {
             animator.SetBool("isInteracting", !isInteracting);
-            animator.SetFloat("interactFloat", -1f);
+            animator.SetFloat("interactFloat", 0f);
             isInteracting = false;
         }
     }
