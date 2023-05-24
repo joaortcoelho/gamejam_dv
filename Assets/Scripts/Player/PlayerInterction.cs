@@ -13,6 +13,7 @@ public class PlayerInterction : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        isInteracting = false;
     }
 
     private void Update()
@@ -22,24 +23,20 @@ public class PlayerInterction : MonoBehaviour
 
     void CheckInteractInput()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
+        if (Input.GetKey(KeyCode.X))
+        {            
             isInteracting = true;
-            //animator.SetBool("isInteracting", isInteracting);
-            //animator.SetFloat("interactFloat", 1f);
+            animator.SetBool("isInteracting", isInteracting);
+            animator.SetFloat("interactFloat", 1f);
         }
 
-        /*if (Input.GetKey(KeyCode.X))
-        {
-            animator.SetFloat("interactFloat", 0f);
-        }*/
         if (Input.GetKeyUp(KeyCode.X))
         {
-           // animator.SetFloat("interactFloat", -1f);
-            isInteracting = false;
-            //animator.SetBool("isInteracting", isInteracting);
+            animator.SetBool("isInteracting", !isInteracting);
+            animator.SetFloat("interactFloat", -1f);
         }
     }
+    
     private void OnTriggerStay2D(Collider2D other)
     {
         
