@@ -4865,10 +4865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathSounds: {fileID: 11400000, guid: 797e41ec4487383958f8fd41d3365621, type: 2}
   rumbleSounds: {fileID: 11400000, guid: 57576b9b6c8507573aee19700213d542, type: 2}
-  breakSounds: {fileID: 11400000, guid: 87b70d10b42f31036ab3e5f83b21b766, type: 2}
   levelData: {fileID: 11400000, guid: 9fce84dda6f2e2419ad84de3d92c4cbe, type: 2}
   statueBrokenParticle: {fileID: 6928047425136688520, guid: d41f479f1371f4bf991db76e81c19870, type: 3}
-  foundLight: {fileID: 0}
   crossParticles: {fileID: 8419005572774613507}
   canRecover: 0
   recoveryCooldown: 8
@@ -4963,7 +4961,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 86d5cef34c614d9dc8d8e844b8386e54, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4972,7 +4970,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 10.751359
+  MaxDistance: 9
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
