@@ -711,6 +711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsMenuGO: {fileID: 1614432595}
   tutorialMenuGO: {fileID: 548326858}
+  character: {fileID: 1812834200}
+  playBtn: {fileID: 848290709}
 --- !u!1 &548326858
 GameObject:
   m_ObjectHideFlags: 0

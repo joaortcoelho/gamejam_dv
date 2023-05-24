@@ -8,6 +8,8 @@ public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject creditsMenuGO, tutorialMenuGO;
+    [SerializeField] private GameObject character;
+    [SerializeField] private GameObject playBtn;
 
     private void Start()
     {
@@ -47,23 +49,27 @@ public class MenuManager : MonoBehaviour
     {
         creditsMenuGO.SetActive(true);
         creditsMenuGO.GetComponentInChildren<Button>().Select();
+        character.SetActive(false);
     }
     
     public void CloseCredits()
     {
         creditsMenuGO.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(GameObject.Find("playBtn"), new BaseEventData(EventSystem.current));
+        EventSystem.current.SetSelectedGameObject(playBtn, new BaseEventData(EventSystem.current));
+        character.SetActive(true);
     }
 
     public void OpenTutorial()
     {
         tutorialMenuGO.SetActive(true);
         tutorialMenuGO.GetComponentInChildren<Button>().Select();
+        character.SetActive(false);
     }
 
     public void CloseTutorial()
     {
         tutorialMenuGO.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(GameObject.Find("playBtn"), new BaseEventData(EventSystem.current));
+        EventSystem.current.SetSelectedGameObject(playBtn, new BaseEventData(EventSystem.current));
+        character.SetActive(true);
     }
 }
