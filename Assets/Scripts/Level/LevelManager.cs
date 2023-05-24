@@ -47,8 +47,8 @@ public class LevelManager : MonoBehaviour
                 
             }else if (transitionTimer >= 2f)
             {
-                SceneManager.LoadScene("WinScreen");
                 transitionTimer = 0;
+                SceneManager.LoadScene(levelData.NextLevel);
             }
             
         }

@@ -19,6 +19,15 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetAxis("Cancel") == 1f)
+        {
+            creditsMenuGO.SetActive(false);
+            tutorialMenuGO.SetActive(false);
+        }
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
