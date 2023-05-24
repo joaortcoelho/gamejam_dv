@@ -207,7 +207,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 579323150}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenuLogic, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -627,11 +627,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 579323145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88491fcc4468a3130af4e6c86fbb242d, type: 3}
+  m_Script: {fileID: 11500000, guid: c5057ef66b249611d9a30d72275939b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creditsMenuGO: {fileID: 0}
-  tutorialMenuGO: {fileID: 0}
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &587251064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1092,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 579323150}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenuLogic, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -1196,8 +1195,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 579323150}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayLevelOne
+        m_TargetAssemblyTypeName: PauseMenuLogic, Assembly-CSharp
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

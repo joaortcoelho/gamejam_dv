@@ -59,4 +59,9 @@ public class PauseMenuLogic : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    
+    public void Retry()
+    {
+        SceneManager.LoadScene("level1");
+    }
 }
