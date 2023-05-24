@@ -1,20 +1,39 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Button = UnityEngine.UI.Button;
+using Cursor = UnityEngine.Cursor;
 
 public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject creditsMenuGO, tutorialMenuGO;
+    [SerializeField] private GameObject character;
+    [SerializeField] private GameObject playBtn;
 
     private void Start()
     {
-        creditsMenuGO.SetActive(false);
-        tutorialMenuGO.SetActive(false);
+        Cursor.visible = false;
+        if (creditsMenuGO && tutorialMenuGO)
+        {
+            creditsMenuGO.SetActive(false);
+            tutorialMenuGO.SetActive(false);
+        }
     }
 
+    private void Update()
+    {
+        if (Input.GetAxis("Cancel") == 1f)
+        {
+            creditsMenuGO.SetActive(false);
+            tutorialMenuGO.SetActive(false);
+        }
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void PlayLevelOne()
     {
         SceneManager.LoadScene("level1");
@@ -38,20 +57,28 @@ public class MenuManager : MonoBehaviour
     public void OpenCredits()
     {
         creditsMenuGO.SetActive(true);
+        creditsMenuGO.GetComponentInChildren<Button>().Select();
+        character.SetActive(false);
     }
     
     public void CloseCredits()
     {
         creditsMenuGO.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(playBtn, new BaseEventData(EventSystem.current));
+        character.SetActive(true);
     }
 
     public void OpenTutorial()
     {
         tutorialMenuGO.SetActive(true);
+        tutorialMenuGO.GetComponentInChildren<Button>().Select();
+        character.SetActive(false);
     }
 
     public void CloseTutorial()
     {
         tutorialMenuGO.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(playBtn, new BaseEventData(EventSystem.current));
+        character.SetActive(true);
     }
 }

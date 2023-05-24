@@ -6,7 +6,8 @@ public class LevelsInformation : ScriptableObject
 {
   private int maxPacts = 0;
   private int purifiedPacts = 0;
-
+  [SerializeField] private string currentLevel;
+  [SerializeField] private string nextLevel;
   public int MaxPacts
   {
     get => maxPacts;
@@ -18,6 +19,17 @@ public class LevelsInformation : ScriptableObject
     get => purifiedPacts;
     set => purifiedPacts = value;
   }
+
+  public string CurrentLevel
+  {
+    get => currentLevel;
+  }
+  
+  public string NextLevel
+  {
+    get => nextLevel;
+  }
+  
   public void OnAfterDeserialize()
   {
     maxPacts = 0;

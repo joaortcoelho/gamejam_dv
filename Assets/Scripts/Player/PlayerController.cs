@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     // PLAYER INPUT
     private float movementInput;
+    public static event Action OnPausePressed;
     
     //PLAYER MOVEMENT VALUES
     [SerializeField] private float moveSpeed = 2f;
@@ -100,6 +101,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             jumpCommand = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnPausePressed?.Invoke();
         }
         
     }
