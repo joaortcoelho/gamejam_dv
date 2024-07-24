@@ -1,3 +1,3 @@
-# GameJam DV
+# The Purifier - 2D Single-Screen Platformer
 
-O melhor jogo que o IPS já alguma vez viu na vida!
+GameJam submission for Development of Videogames at IPSetúbal.
